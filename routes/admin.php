@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\CategorieController;
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\SettingController;
@@ -23,7 +24,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 Route::middleware(['auth', IsAdmin::class])->group(function() {
     Route::resource('category', CategorieController::class)->except(['show', 'create']);
-    Route::resource('abouts', CategorieController::class)->except(['show', 'create']);
+    Route::resource('abouts', AboutController::class)->except(['show', 'create']);
 
     //Setting Route
     Route::prefix('setting')->group(function () {

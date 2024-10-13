@@ -47,7 +47,7 @@
                         </a>
                         <ul class="pc-submenu">
                             <li class="pc-item"><a class="pc-link"
-                                href="{{route('category.index')}}">ক্যাটাগরি</a>
+                                href="{{route('category.index')}}">Category</a>
                             </li>
                              <li class="pc-item"><a class="pc-link"
                                 href="{{route('abouts.index')}}">About</a>
