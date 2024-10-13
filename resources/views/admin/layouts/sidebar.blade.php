@@ -6,8 +6,8 @@
         <div class="m-header">
             <a href="{{ route('admin.home') }}" class="b-brand text-primary">
                 <!-- Change your logo from here -->
-                {{-- <img src="{{ url($setting->logo) }}" alt="logo image" class="logo-lg" style="max-width: 150px; max-height: 50px;"> --}}
-                <span class="badge bg-primary rounded-pill ms-2 theme-version">মাসিক নিউজ পোর্টাল</span>
+                 <img src="{{ url($setting->logo) }}" alt="logo image" class="logo-lg" style="max-width: 150px; max-height: 50px;"> 
+                <span class="badge bg-primary rounded-pill ms-2 theme-version">CodeXillium Solutions</span>
             </a>
         </div>
         
@@ -33,36 +33,36 @@
         </div>
         <div class="navbar-content">
             <ul class="pc-navbar">
-                <li class="pc-item pc-caption"><label>এডমিন প্যানেল</label></li>
+                <li class="pc-item pc-caption"><label>Admin Panel</label></li>
                 <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link">
                         <span class="pc-micon"><i class="ph-duotone ph-gauge"></i> </span>
-                        <span class="pc-mtext">ড্যাশবোর্ড</span>
+                        <span class="pc-mtext">Dashboard</span>
                         <span class="pc-arrow"></span></a>
                 </li>
                 <li class="pc-item pc-hasmenu">
                         <a href="#!" class="pc-link">
                                 <span class="pc-micon"><i class="ti ti-layout-grid-add"></i></span>
-                                <span class="pc-mtext">নিউজ ক্যাটাগরি</span>
+                                <span class="pc-mtext">Office Info</span>
                                 <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                         </a>
                         <ul class="pc-submenu">
                             <li class="pc-item"><a class="pc-link"
                                 href="{{route('category.index')}}">ক্যাটাগরি</a>
                             </li>
-                            <li class="pc-item"><a class="pc-link"
-                                href="{{route('epaper.index')}}">ই-পেপার</a>
+                             <li class="pc-item"><a class="pc-link"
+                                href="{{route('abouts.index')}}">About</a>
                             </li>
-                            <li class="pc-item"><a class="pc-link"
+                            {{-- <li class="pc-item"><a class="pc-link"
                                href="{{route('article.index')}}">আরটিকেল</a>
-                           </li> 
+                           </li>   --}}
 
-                           <li class="pc-item"><a class="pc-link"
+                           {{-- <li class="pc-item"><a class="pc-link"
                             href="{{route('poem.index')}}">কবিতা</a>
                         </li> 
 
                         <li class="pc-item"><a class="pc-link"
                             href="{{ route('advertisement.index') }}">বিজ্ঞাপন</a>
-                        </li>
+                        </li> --}}
                         </ul>
                 </li>
           
@@ -88,10 +88,10 @@
                         {{-- <li class="pc-item"><a class="pc-link"
                             href="{{route('brand.index')}}">Payment Gateway</a>
                         </li> --}}
-                        <li class="pc-item"><a class="pc-link"
+                        {{-- <li class="pc-item"><a class="pc-link"
             
                             href="{{ route('contacts.index') }}">যোগাযোগ</a>
-                    </li>
+                    </li> --}}
                     </ul>
                 </li>
 
