@@ -1,0 +1,151 @@
+.kk_start_date {
+    text-align: center;
+}
+
+.niom .niom_h3 {
+    background-color: red;
+    display: inline-block;
+    color: white;
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+.left_site {
+    display: flex;
+
+    >div:nth-child(1) {
+        width: 120px;
+    }
+}
+
+.input_left {
+    flex: 1;
+    background-color: transparent;
+}
+
+.inside_input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid black;
+    border-style: dotted;
+    width: 100%;
+}
+
+/* .pasa_pasi{ */
+
+/* @media only screen and (max-width: 1400px) {
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        } */
+
+
+
+
+/* } */
+
+.kk_all {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+
+
+}
+
+.kk_left {
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.kk_right {
+    width: 150px;
+}
+
+
+/* margin-top: -100px;
+    padding-left: 15px;
+    margin-top: 22px; */
+
+@media screen and (max-width: 574.9px) {
+    .kk_right img {
+        margin-top: -100px;
+        padding-left: 15px;
+        margin-top: 22px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .kk_right img {
+        margin-top: -100px;
+        padding-left: -27px;
+        margin-top: 22px;
+        /* position: static; */
+        overflow: hidden;
+        margin-right: 34px;
+        transform: translateX(-223px);
+    }
+}
+
+
+.payment_taka {
+    margin-top: 10px;
+
+}
+
+.payment_taka h3 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.payment_button {
+    text-align: center;
+    margin-top: 20px;
+
+
+
+}
+
+.payment_button button {
+
+    font-size: 35px;
+    color: white;
+    background-color: rgb(223, 29, 29);
+    padding: 0px 15px;
+     border: 2px solid white;
+    border-radius: 25px;
+}
+
+.error_font {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (max-width: 574.9px) {
+    .kk_all {
+        grid-template-columns: 1fr;
+    }
+
+    .kk_left{
+        order: 2;
+    }
+
+    .left_site {
+        display: grid;
+    }
+    .inside_input {
+        border: 1px solid black;
+        border-radius: 2px;
+    }
+
+    .pasa_pasi{
+        margin-bottom: 30px !important;
+    }
+}
