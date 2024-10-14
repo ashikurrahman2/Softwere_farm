@@ -37,8 +37,15 @@
                       <th>SL</th>
                       <th>Title</th>
                       <th>Sub Title</th>
-                      <th>Image</th>
                       <th>Our Mission</th>
+                      <th>Self Image</th>
+                      <th>Leader Name</th>
+                      <th>Leader Designation</th>
+                      <th>Company Name</th>
+                      <th>Complete Projects</th>
+                      <th>Happy Clients</th>
+                      <th>Skills Experts</th>
+                      <th>Media Posts</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -50,8 +57,15 @@
                       <th>SL</th>
                       <th>Title</th>
                       <th>Sub Title</th>
-                      <th>Image</th>
                       <th>Our Mission</th>
+                      <th>Self Image</th>
+                      <th>Leader Name</th>
+                      <th>Leader Designation</th>
+                      <th>Company Name</th>
+                      <th>Complete Projects</th>
+                      <th>Happy Clients</th>
+                      <th>Skills Experts</th>
+                      <th>Media Posts</th>
                       <th>Action</th>
                     </tr>
                   </tfoot>
@@ -156,7 +170,7 @@
                 </div>
                 
                   <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                       <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
@@ -193,8 +207,15 @@
         { data: 'DT_RowIndex', name: 'DT_RowIndex' },
         { data: 'title', name: 'title' },
         { data: 'sub_title', name: 'sub_title' },
-        { data: 'self_image', name: 'self_image' },
         { data: 'our_mission', name: 'our_mission' },
+        { data: 'self_image', name: 'self_image' },
+        { data: 'leader_name', name: 'leader_name' },
+        { data: 'leader_designation', name: 'leader_designation' },
+        { data: 'company_name', name: 'company_name' },
+        { data: 'complete_projects', name: 'complete_projects' },
+        { data: 'happy_clients', name: 'happy_clients' },
+        { data: 'skills_experts', name: 'skills_experts' },
+        { data: 'media_posts', name: 'media_posts' },
         { data: 'action', name: 'action', orderable: false, searchable: false }
       ]
     });
