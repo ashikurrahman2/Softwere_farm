@@ -39,7 +39,7 @@ class About extends Model
 
             // Resize the image using Intervention Image
             $imageManager = new ImageManager(new Driver());
-            $image = $imageManager->make(self::$directory . self::$imageName);
+            $image = $imageManager->read(self::$directory . self::$imageName);
             $image->resize(1200, 600); // Resize to required dimensions
             $image->save(self::$directory . self::$imageName);
 

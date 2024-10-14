@@ -18,7 +18,7 @@ class AboutController extends Controller
         $this->middleware('auth');
         $this->toastr = $toastr;
     }
-
+    // View Data operation
     public function index(Request $request)
     {
         if ($request->ajax()) {
@@ -51,16 +51,16 @@ class AboutController extends Controller
 
         return view('admin.Office.About.index');
     }
-
+    // Insert data operation
     public function store(Request $request)
     {
         $request->validate([
             'self_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'title' => 'required|string|max:255',
-            'sub_title' => 'required|string|max:255',
-            'leader_name' => 'required|string|max:255',
-            'leader_designation' => 'required|string|max:255',
-            'company_name' => 'required|string|max:255',
+            'title' => 'required|string|max:1000',
+            'sub_title' => 'required|string|max:500',
+            'leader_name' => 'required|string|max:500',
+            'leader_designation' => 'required|string|max:500',
+            'company_name' => 'required|string|max:500',
             'our_mission' => 'nullable|string',
             'complete_projects' => 'nullable|integer',
             'happy_clients' => 'nullable|integer',
@@ -72,21 +72,20 @@ class AboutController extends Controller
         $this->toastr->success('About info added successfully!');
         return back();
     }
-
+    // Edit data operation  
     public function edit(About $about)
     {
         return view('admin.Office.About.edit', compact('about'));
     }
-
     public function update(Request $request, About $about)
     {
         $request->validate([
             'self_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'title' => 'required|string|max:255',
-            'sub_title' => 'required|string|max:255',
-            'leader_name' => 'required|string|max:255',
-            'leader_designation' => 'required|string|max:255',
-            'company_name' => 'required|string|max:255',
+            'title' => 'required|string|max:1000',
+            'sub_title' => 'required|string|max:500',
+            'leader_name' => 'required|string|max:500',
+            'leader_designation' => 'required|string|max:500',
+            'company_name' => 'required|string|max:500',
             'our_mission' => 'nullable|string',
             'complete_projects' => 'nullable|integer',
             'happy_clients' => 'nullable|integer',
@@ -98,7 +97,7 @@ class AboutController extends Controller
         $this->toastr->success('About info updated successfully!');
         return back();
     }
-
+    // Delete data operation
     public function destroy(About $about)
     {
         About::deleteAbout($about);

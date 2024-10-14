@@ -93,12 +93,12 @@
                 <div class="row">
                   <div class="col-md-12">
                       <label for="e_title" class="col-form-label pt-0">Title <sup class="text-size-20 top-1">*</sup></label>
-                      <input type="text" class="form-control" id="e_title" name="title" required>
+                      <input type="text" class="form-control" id="title" name="title" required>
                   </div>
 
                   <div class="col-md-12">
                       <label for="sub_title" class="col-form-label pt-0">Sub Title</label>
-                      <input type="text" class="form-control" id="sub_title" name="sub_title">
+                      <textarea class="form-control" id="sub_title" name="sub_title"></textarea>
                   </div>
 
                   <div class="col-md-12">
@@ -116,57 +116,36 @@
                   <div class="col-md-12">
                     <label for="leader_name" class="col-form-label pt-0">Leader Name</label>
                     <input type="text" class="form-control" id="leader_name" name="leader_name">
-                    @error('leader_name')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
                 </div>
 
                 <div class="col-md-12">
                     <label for="leader_designation" class="col-form-label pt-0">Leader Designation</label>
                     <input type="text" class="form-control" id="leader_designation" name="leader_designation">
-                    @error('leader_designation')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
                 </div>
 
                 <div class="col-md-12">
                     <label for="company_name" class="col-form-label pt-0">Company Name</label>
                     <input type="text" class="form-control" id="company_name" name="company_name">
-                    @error('company_name')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
                 </div>
 
                 <div class="col-md-12">
                     <label for="complete_projects" class="col-form-label pt-0">Complete Projects</label>
                     <input type="number" class="form-control" id="complete_projects" name="complete_projects">
-                    @error('complete_projects')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
                 </div>
 
                 <div class="col-md-12">
                     <label for="happy_clients" class="col-form-label pt-0">Happy Clients</label>
                     <input type="number" class="form-control" id="happy_clients" name="happy_clients">
-                    @error('happy_clients')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
                 </div>
 
                 <div class="col-md-12">
                     <label for="skills_experts" class="col-form-label pt-0">Skills Experts</label>
                     <input type="number" class="form-control" id="skills_experts" name="skills_experts">
-                    @error('skills_experts')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
                 </div>
 
                 <div class="col-md-12">
                     <label for="media_posts" class="col-form-label pt-0">Media Posts</label>
                     <input type="number" class="form-control" id="media_posts" name="media_posts">
-                    @error('media_posts')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
                 </div>
                 
                   <div class="modal-footer">
@@ -185,7 +164,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editModalLabel">Edit Blog</h5>
+                <h5 class="modal-title" id="editModalLabel">Edit About</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
