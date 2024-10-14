@@ -8,36 +8,57 @@
     <title>Magpie - Blog, Magazine Html Template</title>
     
     <!-- favicon -->
-    <link rel=icon href="{{asset('/')}}frontend/assets/img/favicon.png" sizes="20x20" type="image/png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('/')}}frontend/assets/images/favicon.png" sizes="20x20" type="image/png">
+      
+    <!-- CSS
+        ============================================ -->
+    
+        <!-- Icon Font CSS -->
+        <link rel="stylesheet" href="{{ asset('/') }}frontend/assets/css/plugins/all.min.css">
+        <link rel="stylesheet" href="{{ asset('/') }}frontend/assets/css/plugins/flaticon.css">
+    
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="{{ asset('/') }}frontend/assets/css/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('/') }}frontend/assets/css/plugins/swiper-bundle.min.css">
+        <link rel="stylesheet" href="{{ asset('/') }}frontend/assets/css/plugins/aos.css">
+        <link rel="stylesheet" href="{{ asset('/') }}frontend/assets/css/plugins/magnific-popup.css">
+    
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="{{ asset('/') }}frontend/assets/css/style.css">
 
-    <!-- Stylesheet -->
-@include('frontend.layouts.style')
+        
+    <!-- JS
+    ============================================ -->
+    <script src="{{ asset('/') }}frontend/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="{{ asset('/') }}frontend/assets/js/vendor/modernizr-3.11.2.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/popper.min.js"></script>
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/bootstrap.min.js"></script>
+
+    <!-- Plugins JS -->
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/aos.js"></script>
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/waypoints.min.js"></script>
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/back-to-top.js"></script>
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/jquery.counterup.min.js"></script>
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/appear.min.js"></script>
+    <script src="{{ asset('/') }}frontend/assets/js/plugins/jquery.magnific-popup.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="{{ asset('/') }}frontend/assets/js/main.js"></script>
 
 </head>
-<body class="home-2">
-
-    <!-- preloader area start -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-inner">
-            <div class="spinner">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
+<body>
+    
+        <!-- Preloader start -->
+        <div id="preloader">
+            <div class="preloader">
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </div>
-
-    <!-- search popup start-->
-    <div class="td-search-popup" id="td-search-popup">
-        <form action="index.html" class="search-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search.....">
-            </div>
-            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    <!-- search popup end-->
-    <div class="body-overlay" id="body-overlay"></div>
-
+        <!-- Preloader End -->
     <!-- header start -->
     @include('frontend.layouts.header')
     <!-- navbar end -->
@@ -47,14 +68,5 @@
     <!-- footer area start -->
     @include('frontend.layouts.footer')
     <!-- footer area end -->
-
-    <!-- back to top area start -->
-    <div class="back-to-top">
-        <span class="back-top"><i class="fa fa-angle-up"></i></span>
-    </div>
-    <!-- back to top area end -->
-
-    <!-- all plugins here -->
-@include('frontend.layouts.script')
 </body>
 </html>
