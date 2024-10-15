@@ -11,6 +11,6 @@ require __DIR__ . '/admin.php';
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware(UserMiddleware::class);
-// Route::get('/', [FrontendController:: class, 'index'])->name('index');
+Route::get('/', [FrontendController:: class, 'index'])->name('index');
 // Route::get('/epapers', [FrontendController:: class, 'epaper'])->name('epapers');
 // Route::get('/epapers/{slug}', [FrontendController::class, 'epaperdetails'])->name('epapers.epaperdetails');

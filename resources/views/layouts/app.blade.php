@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Magpie - Blog, Magazine Html Template</title>
+    <title>Codexillium Solutions | @yield('title')</title>
     
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('/')}}frontend/assets/images/favicon.png" sizes="20x20" type="image/png">
@@ -50,15 +50,9 @@
 
 </head>
 <body>
-    
-        <!-- Preloader start -->
-        <div id="preloader">
-            <div class="preloader">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <!-- Preloader End -->
+    <div class="main-wrapper">
+
+    </div>
     <!-- header start -->
     @include('frontend.layouts.header')
     <!-- navbar end -->
