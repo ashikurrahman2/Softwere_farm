@@ -14,9 +14,14 @@
             </div>
 
             <div class="col-md-12">
-                <label for="our_mission" class="col-form-label pt-0">Our Mission</label>
-                <textarea class="form-control" id="our_mission" name="our_mission">{{ $about->our_mission }}</textarea>
+                <label for="our_mission" class="col-form-label pt-0">Our Mission <sup class="text-size-20 top-1">*</sup></label>
+                <input type="text" class="form-control" id="our_mission" name="our_mission" value="{{ $about->our_mission }}" required>
             </div>
+
+              <div class="col-md-12">
+                  <label for="mission_details" class="col-form-label pt-0">Mission Details</label>
+                  <textarea class="form-control" id="mission_details" name="mission_details">{{ $about->mission_details }}</textarea>
+              </div>
 
             <div class="form-group">
                 <label for="self_image" class="col-form-label pt-0">Current Self Image</label>

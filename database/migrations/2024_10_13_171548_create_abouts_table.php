@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('leader_designation')->nullable();
             $table->string('company_name')->nullable();
             $table->text('our_mission')->nullable();
+            $table->string('mission_details')->nullable();
             $table->integer('complete_projects')->nullable();
             $table->integer('happy_clients')->nullable();
             $table->integer('skills_experts')->nullable();

@@ -22,6 +22,7 @@ class About extends Model
         'leader_designation',
         'company_name',
         'our_mission',
+        'mission_details',
         'complete_projects',
         'happy_clients',
         'skills_experts',
@@ -83,6 +84,7 @@ class About extends Model
         $about->leader_designation = $request->leader_designation;
         $about->company_name = $request->company_name;
         $about->our_mission = $request->our_mission;
+        $about->mission_details = $request->mission_details;
         $about->complete_projects = $request->complete_projects ?? 0;
         $about->happy_clients = $request->happy_clients ?? 0;
         $about->skills_experts = $request->skills_experts ?? 0;

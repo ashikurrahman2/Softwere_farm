@@ -118,22 +118,10 @@
                             <div class="about-list-wrap">
                                 <ul class="about-list">
                                     <li class="list">
-                                        <a href="#" class="toggle-detail">Home Protection <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        <a href="#" class="toggle-detail">{{ $about->our_mission }}<i class="fas fa-long-arrow-alt-right"></i></a>
                                         <div class="detail-content" style="display: none;">
                                             <!-- Add your details here -->
-                                            <p>Home Protection includes a variety of services to ensure the safety of your home and property.</p>
-                                        </div>
-                                    </li>
-                                    <li class="list">
-                                        <a href="#" class="toggle-detail">Corporate Security for Office <i class="fas fa-long-arrow-alt-right"></i></a>
-                                        <div class="detail-content" style="display: none;">
-                                            <p>Corporate Security ensures the safety of your office premises with advanced systems.</p>
-                                        </div>
-                                    </li>
-                                    <li class="list">
-                                        <a href="#" class="toggle-detail">Solution For Devices <i class="fas fa-long-arrow-alt-right"></i></a>
-                                        <div class="detail-content" style="display: none;">
-                                            <p>Device protection solutions cover all your gadgets with comprehensive security.</p>
+                                            <p>{{ $about->mission_details }}</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -151,31 +139,7 @@
     </div>
     <!-- About End -->
 
-    {{-- List about style --}}
-    <style>
-    .detail-content {
-    padding: 10px;
-    background-color: #f0f0f0;
-    margin-top: 5px;
-    border-left: 3px solid #007bff;
-}
- </style>
-
-{{-- List toogle about desctiption script --}}
-<script>
-   document.querySelectorAll('.toggle-detail').forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault();
-        const detailContent = this.nextElementSibling;
-
-        // Toggle the visibility of the detail content
-        if (detailContent.style.display === 'none') {
-            detailContent.style.display = 'block';
-        } else {
-            detailContent.style.display = 'none';
-        }
-    });
-});
-</script>
-
+{{-- Including custom script and custom style file --}}
+    @include('frontend.layouts.custom_script')
+    @include('frontend.layouts.custom_style')
 @endsection

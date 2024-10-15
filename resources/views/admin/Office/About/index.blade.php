@@ -38,6 +38,7 @@
                       <th>Title</th>
                       <th>Sub Title</th>
                       <th>Our Mission</th>
+                      <th>Mission Details</th>
                       <th>Self Image</th>
                       <th>Leader Name</th>
                       <th>Leader Designation</th>
@@ -58,6 +59,7 @@
                       <th>Title</th>
                       <th>Sub Title</th>
                       <th>Our Mission</th>
+                      <th>Mission Details</th>
                       <th>Self Image</th>
                       <th>Leader Name</th>
                       <th>Leader Designation</th>
@@ -102,10 +104,15 @@
                   </div>
 
                   <div class="col-md-12">
-                      <label for="our_mission" class="col-form-label pt-0">Our Mission</label>
-                      <textarea class="form-control" id="our_mission" name="our_mission"></textarea>
+                    <label for="our_mission" class="col-form-label pt-0">Our Mission <sup class="text-size-20 top-1">*</sup></label>
+                    <input type="text" class="form-control" id="our_mission" name="our_mission" required>
+                </div>
+
+                  <div class="col-md-12">
+                      <label for="mission_details" class="col-form-label pt-0">Mission Details</label>
+                      <textarea class="form-control" id="mission_details" name="mission_details"></textarea>
                   </div>
-                  
+
                   <div class="form-group">
                     <label for="self_image" class="col-form-label pt-0">Self Image <sup class="text-size-20 top-1">*</sup></label>
                     <input type="file" class="dropify" data-height="200" name="self_image" />
@@ -187,6 +194,7 @@
         { data: 'title', name: 'title' },
         { data: 'sub_title', name: 'sub_title' },
         { data: 'our_mission', name: 'our_mission' },
+        { data: 'mission_details', name: 'mission_details' },
         { data: 'self_image', name: 'self_image' },
         { data: 'leader_name', name: 'leader_name' },
         { data: 'leader_designation', name: 'leader_designation' },
