@@ -96,9 +96,11 @@
                         <!-- About Image Start -->
                         <div class="about-img">
                             <img class="shape-1" src="{{ asset('/') }}frontend/assets/images/shape/about-shape1.png" alt="">
+                            @foreach($abouts as $about)
                             <div class="image">
-                                <img src="{{ asset('/') }}frontend/assets/images/about-img3.jpg" alt="">
+                                <img src="{{ asset($about->self_image) }}" alt="">
                             </div>
+                            @endforeach
                             <div class="play-btn">
                                 <a class="popup-video" href="https://www.youtube.com/watch?time_continue=3&amp;v=_X0eYtY8T_U"><i class="fas fa-play"></i></a>
                             </div>

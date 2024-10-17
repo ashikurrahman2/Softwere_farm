@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- Page Banner Start -->
-<div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
+<div class="section page-banner-section" style="background-image: url({{ asset('/') }}frontend/assets/images/bg/page-banner.jpg);">
     <div class="shape-1">
         <svg xmlns="http://www.w3.org/2000/svg" width="944px" height="894px">
             <defs>
@@ -48,10 +48,10 @@
                 <div class="col-lg-12">
                     <!-- Page Banner Content Start -->
                     <div class="page-banner text-center">
-                        <h2 class="title">Why Choose Us</h2>
+                        <h2 class="title">Our Team Skills</h2>
                         <ul class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Why Choose Us</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Our Team Skills</li>
                         </ul>
                     </div>
                     <!-- Page Banner Content End -->
@@ -63,7 +63,7 @@
 <!-- Page Banner End -->
 
             <!-- Skill Start -->
-            <div class="section techwix-skill-section-02 section-padding" style="background-image: url(assets/images/bg/skill-bg.jpg);">
+            <div class="section techwix-skill-section-02 section-padding" style="background-image: url({{ asset('/') }}frontend/assets/images/bg/skill-bg.jpg);">
                 <div class="container">
                     <div class="skill-wrap">
                         <div class="row">
@@ -132,7 +132,8 @@
                                             <div class="skill-bar">
                                                 <div class="bar-inner">
                                                     <div class="bar progress-line color-1" data-width="90">
-                                                        <span class="skill-percent"><span class="counter">90</span>%</span>
+                                                        <span class="skill-percent">
+                                                            <span class="counter">90</span>%</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -149,7 +150,7 @@
             <!-- Skill End -->
     
             <!-- Cta Start -->
-            <div class="section techwix-cta-section-04 techwix-cta-section-06 section-padding" style="background-image: url(assets/images/bg/cta-bg5.jpg);">
+            <div class="section techwix-cta-section-04 techwix-cta-section-06 section-padding" style="background-image: url({{ asset('/') }}frontend/assets/images/bg/cta-bg5.jpg);">
                 <div class="container">
                     <div class="cta-wrap">
                         <div class="row align-items-center">

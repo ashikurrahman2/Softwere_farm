@@ -12,4 +12,21 @@ class FrontendController extends Controller
         $abouts = About::all();
         return view('frontend.Pages.index',compact('abouts'));
     }
+    // Viewing the team pages    
+    public function team(){
+        return view('frontend.Pages.teams');
+    }
+
+    public function service(){
+        return view('frontend.Pages.service');
+    }
+
+    public function skillPrefer(){
+        return view('frontend.Pages.skills');
+    }
+
+    public function communicate()
+    {
+        return view('frontend.Pages.contact');
+    }
 }

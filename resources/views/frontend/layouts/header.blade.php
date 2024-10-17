@@ -38,21 +38,21 @@
             <div class="header-menu d-none d-lg-block">
                 <ul class="main-menu">
                     <li class="active-menu">
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li>
                         <a href="about.html">About Us</a>
                     </li>
                     <li>
-                        <a href="about.html">Our Team</a>
+                        <a href="{{ route('teams') }}">Our Team</a>
                     </li>
                     <li>
-                        <a href="about.html">Service</a>
+                        <a href="{{ route('services') }}">Service</a>
                     </li>
                     <li>
-                        <a href="about.html">Our skills</a>
+                        <a href="{{ route('skills') }}">Our skills</a>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{ route('communicates') }}">Contact</a></li>
                 </ul>
             </div>
 
@@ -61,7 +61,7 @@
             
 
                 <div class="header-btn d-none d-xl-block">
-                    <a class="btn btn-4" href="contact.html">Lets Talk</a>
+                    <a class="btn btn-4" href="{{ route('communicates') }}">Lets Talk</a>
                 </div>
                 <!-- Header Toggle Start -->
                 <div class="header-toggle d-lg-none">
@@ -98,7 +98,7 @@
         <div class="offcanvas-menu">
             <ul class="main-menu">
                 <li class="active-menu">
-                    <a href="index.html">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
                     <a href="about.html">About Us</a>

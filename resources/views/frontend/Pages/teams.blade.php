@@ -4,7 +4,7 @@
 
 @section('content')
         <!-- Page Banner Start -->
-        <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
+        <div class="section page-banner-section" style="background-image: url({{ asset('/') }}frontend/assets/images/bg/page-banner.jpg);">
             <div class="shape-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="944px" height="894px">
                     <defs>
@@ -49,7 +49,7 @@
                             <div class="page-banner text-center">
                                 <h2 class="title">Our Team</h2>
                                 <ul class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Our Team</li>
                                 </ul>
                             </div>
@@ -71,155 +71,11 @@
                             <!-- Single Team Start -->
                             <div class="single-team">
                                 <div class="team-img">
-                                    <a href="team.html"><img src="assets/images/team/team-1.jpg" alt=""></a>
+                                    <a href="team.html">
+                                        <img src="{{ asset('/') }}frontend/assets/images/team/team-1.jpg" alt=""></a>
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name"><a href="#">Andrew <br> Max Fetcher</a></h3>
-                                    <span class="designation">CEO, techwix</span>
-                                    <div class="team-social">
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Team End -->
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Single Team Start -->
-                            <div class="single-team">
-                                <div class="team-img">
-                                    <a href="team.html"><img src="assets/images/team/team-2.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name"><a href="#">Arnold <br> human</a></h3>
-                                    <span class="designation">CEO, techwix</span>
-                                    <div class="team-social">
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Single Team Start -->
-                            <div class="single-team">
-                                <div class="team-img">
-                                    <a href="team.html"><img src="assets/images/team/team-3.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name"><a href="#">Mike <br> Holder</a></h3>
-                                    <span class="designation">CEO, techwix</span>
-                                    <div class="team-social">
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Team End -->
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Single Team Start -->
-                            <div class="single-team">
-                                <div class="team-img">
-                                    <a href="team.html"><img src="assets/images/team/team-4.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name"><a href="#">Joakim <br> Ken</a></h3>
-                                    <span class="designation">CEO, techwix</span>
-                                    <div class="team-social">
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Team End -->
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Single Team Start -->
-                            <div class="single-team">
-                                <div class="team-img">
-                                    <a href="team.html"><img src="assets/images/team/team-1.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name"><a href="#">Michael <br> Frater</a></h3>
-                                    <span class="designation">CEO, techwix</span>
-                                    <div class="team-social">
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Team End -->
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Single Team Start -->
-                            <div class="single-team">
-                                <div class="team-img">
-                                    <a href="team.html"><img src="assets/images/team/team-2.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name"><a href="#">Kevin <br> Perry</a></h3> 
-                                    <span class="designation">CEO, techwix</span>
-                                    <div class="team-social">
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Single Team Start -->
-                            <div class="single-team">
-                                <div class="team-img">
-                                    <a href="team.html"><img src="assets/images/team/team-3.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name"><a href="#">Michael <br> Frater</a></h3> 
-                                    <span class="designation">CEO, techwix</span>
-                                    <div class="team-social">
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Team End -->
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Single Team Start -->
-                            <div class="single-team">
-                                <div class="team-img">
-                                    <a href="team.html"><img src="assets/images/team/team-4.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name"><a href="#">Steven <br> Smith</a></h3> 
                                     <span class="designation">CEO, techwix</span>
                                     <div class="team-social">
                                         <ul class="social">

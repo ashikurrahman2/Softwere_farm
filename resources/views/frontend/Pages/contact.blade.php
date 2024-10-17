@@ -5,7 +5,7 @@
 @section('content')
     
         <!-- Page Banner Start -->
-        <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
+        <div class="section page-banner-section" style="background-image: url({{ asset('/') }}frontend/assets/images/bg/page-banner.jpg);">
             <div class="shape-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="944px" height="894px">
                     <defs>
@@ -50,7 +50,7 @@
                             <div class="page-banner text-center">
                                 <h2 class="title">Contact Us</h2>
                                 <ul class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                                 </ul>
                             </div>
