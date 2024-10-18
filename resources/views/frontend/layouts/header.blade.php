@@ -61,7 +61,7 @@
             
 
                 <div class="header-btn d-none d-xl-block">
-                    <a class="btn btn-4" href="{{ route('communicates') }}">Lets Talk</a>
+                    <a class="btn btn-4" href="{{ route('message') }}">Lets Talk</a>
                 </div>
                 <!-- Header Toggle Start -->
                 <div class="header-toggle d-lg-none">

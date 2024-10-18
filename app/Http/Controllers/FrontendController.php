@@ -29,4 +29,11 @@ class FrontendController extends Controller
     {
         return view('frontend.Pages.contact');
     }
-}
+
+    public function message()
+    {
+        return view('frontend.Pages.message_us');
+            
+        }
+    }
+

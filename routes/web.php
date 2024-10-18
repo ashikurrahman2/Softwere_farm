@@ -16,3 +16,4 @@ Route::get('/teams', [FrontendController:: class, 'team'])->name('teams');
 Route::get('/services', [FrontendController:: class, 'service'])->name('services');
 Route::get('/skills', [FrontendController:: class, 'skillPrefer'])->name('skills');
 Route::get('/contacts', [FrontendController:: class, 'communicate'])->name('communicates');
+Route::get('/message-us', [FrontendController:: class, 'message'])->name('message');
