@@ -73,11 +73,13 @@ class AboutController extends Controller
         $this->toastr->success('About info added successfully!');
         return back();
     }
-    // Edit data operation  
+     // Fetching the edit file
     public function edit(About $about)
     {
         return view('admin.Office.About.edit', compact('about'));
     }
+
+    // Edit data operation 
     public function update(Request $request, About $about)
     {
         $request->validate([

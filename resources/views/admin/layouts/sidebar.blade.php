@@ -46,15 +46,12 @@
                                 <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                         </a>
                         <ul class="pc-submenu">
+                             <li class="pc-item">
+                                <a class="pc-link" href="{{route('abouts.index')}}">About</a>
+                            </li>
                             <li class="pc-item"><a class="pc-link"
-                                href="{{route('category.index')}}">Category</a>
-                            </li>
-                             <li class="pc-item"><a class="pc-link"
-                                href="{{route('abouts.index')}}">About</a>
-                            </li>
-                            {{-- <li class="pc-item"><a class="pc-link"
-                               href="{{route('article.index')}}">আরটিকেল</a>
-                           </li>   --}}
+                               href="{{route('team.index')}}">Teams</a>
+                           </li>  
 
                            {{-- <li class="pc-item"><a class="pc-link"
                             href="{{route('poem.index')}}">কবিতা</a>
