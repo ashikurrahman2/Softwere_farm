@@ -2,17 +2,55 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Service;
+use Flasher\Toastr\Prime\ToastrInterface;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
+use App\Http\Controllers\Controller;
 
 class ServiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+      // Toastr message calling
+      protected $toastr;
+
+      public function __construct(ToastrInterface $toastr)
+      {
+          $this->middleware('auth');
+          $this->toastr = $toastr;
+      }
+
+   // View Data operation
+    public function index(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            $servicess = Service::all();
+            return DataTables::of($servicess)
+                ->addIndexColumn()
+                ->addColumn('service_image', function ($row) {
+                    if ($row->service_image) {
+                        return '<img src="' . asset($row->service_image) . '" alt="service_image" class="img-fluid center-image" style="max-width: 40px; display: block; margin: 0 auto;">';
+                    } else {
+                        return 'No image uploaded';
+                    }
+                })
+                ->addColumn('action', function ($row) {
+                    $actionbtn = '<a href="javascript:void(0)" class="btn btn-primary btn-sm me-1 edit" data-id="' . $row->id . '" data-bs-toggle="modal" data-bs-target="#editModal">
+                                    <i class="fa fa-edit"></i>
+                                  </a>
+                                  <button class="btn btn-danger btn-sm delete" data-id="' . $row->id . '">
+                                      <i class="fa fa-trash"></i>
+                                  </button>
+                                  <form id="delete-form-' . $row->id . '" action="' . route('service.destroy', $row->id) . '" method="POST" style="display: none;">
+                                      ' . csrf_field() . '
+                                      ' . method_field('DELETE') . '
+                                  </form>';
+                    return $actionbtn;
+                })
+                ->rawColumns(['service_image', 'action'])
+                ->make(true);
+        }
+
+        return view('admin.Office.Service.index');
     }
 
     /**
@@ -23,43 +61,53 @@ class ServiceController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+    // Insert data operation
+        public function store(Request $request)
+        {
+            $request->validate([
+                'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'service_title' => 'required|string|max:1000',
+                'service_description' => 'required|string|max:500',
+            ]);
+
+            Service::newService($request);
+            $this->toastr->success('services info added successfully!');
+            return back();
+        }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Service $services)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+     // Fetching the edit file
+     public function edit(Service $services)
+     {
+         return view('admin.Office.Service.edit', compact('services'));
+     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+   // Edit data operation 
+   public function update(Request $request, Service $services)
+   {
+       $request->validate([
+           'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+           'service_title' => 'required|string|max:1000',
+           'service_description' => 'required|string|max:500',
+       ]);
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+       Service::updateService($request, $services);
+       $this->toastr->success('Service info updated successfully!');
+       return back();
+   }
+
+    // Delete data operation
+    public function destroy(Service $services)
     {
-        //
+        Service::deleteService($services);
+        $this->toastr->danger('Service info deleted successfully!');
+        return back();
     }
 }

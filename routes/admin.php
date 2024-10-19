@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SeoController;
@@ -26,6 +27,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 Route::middleware(['auth', IsAdmin::class])->group(function() {
     Route::resource('abouts', AboutController::class)->except(['show', 'create']);
     Route::resource('team', TeamController::class);
+    Route::resource('service', ServiceController::class);
    
     /*** Setting Route ***/
     Route::prefix('setting')->group(function () {
