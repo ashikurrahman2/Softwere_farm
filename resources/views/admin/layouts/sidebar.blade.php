@@ -53,13 +53,13 @@
                                href="{{route('team.index')}}">Teams</a>
                            </li>  
 
-                           {{-- <li class="pc-item"><a class="pc-link"
-                            href="{{route('poem.index')}}">কবিতা</a>
+                            <li class="pc-item"><a class="pc-link"
+                            href="{{route('service.index')}}">Services</a>
                         </li> 
 
-                        <li class="pc-item"><a class="pc-link"
+                        {{-- <li class="pc-item"><a class="pc-link"
                             href="{{ route('advertisement.index') }}">বিজ্ঞাপন</a>
-                        </li> --}}
+                        </li>  --}}
                         </ul>
                 </li>
           

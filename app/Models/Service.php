@@ -52,8 +52,11 @@ class Service extends Model
     }
 
     // Update an existing About entry
-    public static function updateService($request, $service)
+    public static function updateService($request, $id)
     {
+          // Fetch the team record using the ID
+          $service = self::findOrFail($id);
+
         if ($request->file('service_image')) {
             if (file_exists($service->service_image)) {
                 unlink($service->service_image);

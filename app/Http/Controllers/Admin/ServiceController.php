@@ -1,30 +1,29 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Service;
-use Flasher\Toastr\Prime\ToastrInterface;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
+use Flasher\Toastr\Prime\ToastrInterface;
 use App\Http\Controllers\Controller;
 
 class ServiceController extends Controller
 {
-      // Toastr message calling
-      protected $toastr;
+    // Toastr message calling
+    protected $toastr;
 
-      public function __construct(ToastrInterface $toastr)
-      {
-          $this->middleware('auth');
-          $this->toastr = $toastr;
-      }
+    public function __construct(ToastrInterface $toastr)
+    {
+        $this->middleware('auth');
+        $this->toastr = $toastr;
+    }
 
-   // View Data operation
+      // View Data operation
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $servicess = Service::all();
-            return DataTables::of($servicess)
+            $services = Service::all();
+            return DataTables::of($services)
                 ->addIndexColumn()
                 ->addColumn('service_image', function ($row) {
                     if ($row->service_image) {
@@ -34,7 +33,7 @@ class ServiceController extends Controller
                     }
                 })
                 ->addColumn('action', function ($row) {
-                    $actionbtn = '<a href="javascript:void(0)" class="btn btn-primary btn-sm me-1 edit" data-id="' . $row->id . '" data-bs-toggle="modal" data-bs-target="#editModal">
+                    $actionBtn = '<a href="javascript:void(0)" class="btn btn-primary btn-sm me-1 edit" data-id="' . $row->id . '" data-bs-toggle="modal" data-bs-target="#editModal">
                                     <i class="fa fa-edit"></i>
                                   </a>
                                   <button class="btn btn-danger btn-sm delete" data-id="' . $row->id . '">
@@ -44,7 +43,7 @@ class ServiceController extends Controller
                                       ' . csrf_field() . '
                                       ' . method_field('DELETE') . '
                                   </form>';
-                    return $actionbtn;
+                    return $actionBtn;
                 })
                 ->rawColumns(['service_image', 'action'])
                 ->make(true);
@@ -53,61 +52,48 @@ class ServiceController extends Controller
         return view('admin.Office.Service.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    // Insert Operation
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'service_title' => 'required|string|max:1000',
+            'service_description' => 'required|string|max:500',
+        ]);
+
+        Service::newService($request);
+        $this->toastr->success('Service added successfully!');
+        return back();
     }
 
-    // Insert data operation
-        public function store(Request $request)
-        {
-            $request->validate([
-                'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'service_title' => 'required|string|max:1000',
-                'service_description' => 'required|string|max:500',
-            ]);
-
-            Service::newService($request);
-            $this->toastr->success('services info added successfully!');
-            return back();
-        }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Service $services)
+    // Fetching edit file
+    public function edit($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        return view('admin.Office.Service.edit', compact('service'));
     }
 
-     // Fetching the edit file
-     public function edit(Service $services)
-     {
-         return view('admin.Office.Service.edit', compact('services'));
-     }
-
-   // Edit data operation 
-   public function update(Request $request, Service $services)
-   {
-       $request->validate([
-           'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-           'service_title' => 'required|string|max:1000',
-           'service_description' => 'required|string|max:500',
-       ]);
-
-       Service::updateService($request, $services);
-       $this->toastr->success('Service info updated successfully!');
-       return back();
-   }
-
-    // Delete data operation
-    public function destroy(Service $services)
+    // Update operation
+    public function update(Request $request, Service $service)
     {
-        Service::deleteService($services);
-        $this->toastr->danger('Service info deleted successfully!');
+        $request->validate([
+            'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'service_title' => 'required|string|max:1000',
+            'service_description' => 'required|string|max:500',
+        ]);
+
+        Service::updateService($request, $service->id);
+        $this->toastr->success('Service updated successfully!');
+        return back();
+    }
+
+    
+    // Delete Operation
+    public function destroy($id)
+    {
+        $service = Service::findOrFail($id);
+        $service->delete();
+        $this->toastr->success('Service deleted successfully!');
         return back();
     }
 }
