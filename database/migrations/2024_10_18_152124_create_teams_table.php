@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('member_details')->nullable();
             $table->string('company_name')->nullable();
             $table->string('designation')->nullable();
+            $table->string('skills')->nullable();
             $table->timestamps();
         });
     }

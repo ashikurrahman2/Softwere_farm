@@ -62,8 +62,131 @@
 </div>
 <!-- Page Banner End -->
 
+              <!-- Choose Us Start -->
+              <div class="section techwix-choose-us-section techwix-choose-us-section-03 section-padding">
+                <div class="container">
+                    <!-- Choose Us Wrap Start -->
+                    <div class="choose-us-wrap">
+                        <div class="section-title text-center">
+                            <h3 class="sub-title">REASON TO CHOOSE US</h3>
+                            <h2 class="title">We provide truly prominent IT solutions.</h2>
+                        </div>
+                        <div class="choose-us-content-wrap">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <!-- Choose Us Item Start -->
+                                    <div class="choose-us-item-02">
+                                        <div class="choose-us-img">
+                                            <img src="assets/images/ser-icon9.png" alt="">
+                                        </div>
+                                        <div class="choose-us-content">
+                                            <h3 class="title"><a href="service.html">Infrustructure <br> Technology</a></h3>
+                                            <p>Accelerate innovation with world-class tech teams We’ll match you to an entire.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Choose Us Item End -->
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <!-- Choose Us Item Start -->
+                                    <div class="choose-us-item-02">
+                                        <div class="choose-us-img">
+                                            <img src="assets/images/counter-3.png" alt="">
+                                        </div>
+                                        <div class="choose-us-content">
+                                            <h3 class="title"><a href="service.html">Highly professional team members</a></h3>
+                                            <p>Accelerate innovation with world-class tech teams We’ll match you to an entire.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Choose Us Item End -->
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <!-- Choose Us Item Start -->
+                                    <div class="choose-us-item-02">
+                                        <div class="choose-us-img">
+                                            <img src="assets/images/ser-icon10.png" alt="">
+                                        </div>
+                                        <div class="choose-us-content">
+                                            <h3 class="title"><a href="service.html">Security <br> Management</a></h3>
+                                            <p>Accelerate innovation with world-class tech teams We’ll match you to an entire.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Choose Us Item End -->
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <!-- Choose Us Item Start -->
+                                    <div class="choose-us-item-02">
+                                        <div class="choose-us-img">
+                                            <img src="assets/images/ser-icon12.png" alt="">
+                                        </div>
+                                        <div class="choose-us-content">
+                                            <h3 class="title"><a href="service.html">Desktop <br> Computing</a></h3>
+                                            <p>Accelerate innovation with world-class tech teams We’ll match you to an entire.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Choose Us Item End -->
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <!-- Choose Us Item Start -->
+                                    <div class="choose-us-item-02">
+                                        <div class="choose-us-img">
+                                            <img src="assets/images/counter-1.png" alt="">
+                                        </div>
+                                        <div class="choose-us-content">
+                                            <h3 class="title"><a href="service.html">Infrustructure <br> Technology</a></h3>
+                                            <p>Accelerate innovation with world-class tech teams We’ll match you to an entire.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Choose Us Item End -->
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <!-- Choose Us Item Start -->
+                                    <div class="choose-us-item-02">
+                                        <div class="choose-us-img">
+                                            <img src="assets/images/counter-2.png" alt="">
+                                        </div>
+                                        <div class="choose-us-content">
+                                            <h3 class="title"><a href="service.html">Ideas for high return investment</a></h3>
+                                            <p>Accelerate innovation with world-class tech teams We’ll match you to an entire.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Choose Us Item End -->
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <!-- Choose Us Item Start -->
+                                    <div class="choose-us-item-02">
+                                        <div class="choose-us-img">
+                                            <img src="assets/images/ser-icon21.png" alt="">
+                                        </div>
+                                        <div class="choose-us-content">
+                                            <h3 class="title"><a href="service.html">Fully high IT <br> Managment</a></h3>
+                                            <p>Accelerate innovation with world-class tech teams We’ll match you to an entire.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Choose Us Item End -->
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <!-- Choose Us Item Start -->
+                                    <div class="choose-us-item-02">
+                                        <div class="choose-us-img">
+                                            <img src="assets/images/ser-icon22.png" alt="">
+                                        </div>
+                                        <div class="choose-us-content">
+                                            <h3 class="title"><a href="service.html">Data secure & Managment</a></h3>
+                                            <p>Accelerate innovation with world-class tech teams We’ll match you to an entire.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Choose Us Item End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Choose Us Wrap End -->
+                </div>
+            </div>
+            <!-- Choose Us End -->
+    
             <!-- Skill Start -->
-            <div class="section techwix-skill-section-02 section-padding" style="background-image: url({{ asset('/') }}frontend/assets/images/bg/skill-bg.jpg);">
+            <div class="section techwix-skill-section-02 section-padding" style="background-image: url(assets/images/bg/skill-bg.jpg);">
                 <div class="container">
                     <div class="skill-wrap">
                         <div class="row">
@@ -132,8 +255,7 @@
                                             <div class="skill-bar">
                                                 <div class="bar-inner">
                                                     <div class="bar progress-line color-1" data-width="90">
-                                                        <span class="skill-percent">
-                                                            <span class="counter">90</span>%</span>
+                                                        <span class="skill-percent"><span class="counter">90</span>%</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -150,7 +272,7 @@
             <!-- Skill End -->
     
             <!-- Cta Start -->
-            <div class="section techwix-cta-section-04 techwix-cta-section-06 section-padding" style="background-image: url({{ asset('/') }}frontend/assets/images/bg/cta-bg5.jpg);">
+            <div class="section techwix-cta-section-04 techwix-cta-section-06 section-padding" style="background-image: url(assets/images/bg/cta-bg5.jpg);">
                 <div class="container">
                     <div class="cta-wrap">
                         <div class="row align-items-center">

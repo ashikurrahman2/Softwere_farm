@@ -17,18 +17,21 @@
                         <div class="col-lg-6">
                             <!-- Experience Wrap Start -->
                             <div class="experience-wrap">
+                                @foreach ($services as $service)
                                 <img class="shape-1" src="{{ asset('/') }}frontend/assets/images/shape/experince-shape2.png" alt="">
                                 <div class="experience" style="background-image: url({{ asset('/') }}frontend/assets/images/shape/exp-bg2.jpg);">
-                                    <h3 class="number">2</h3>
+                                    <h3 class="number">{{ $service->experience }}</h3>
                                     <span>Years Experience Working</span>
                                 </div>
                             </div>
+                            @endforeach
                             <!-- Experience Wrap End -->
                         </div>
                         <div class="col-lg-6">
+                            @foreach ($services as $service)
                             <!-- Service Content Start -->
                             <div class="service-content">
-                                <p class="text">Accelerate innovation with world-class tech teams We’ll match you to an entire remote team of incredible freelance talent for all your software development needs.</p>
+                                <p class="text">{{ $service->service_description }}</p>
                                 <div class="service-list">
                                     <ul>
                                         <li>
@@ -48,6 +51,7 @@
                             </div>
                             <!-- Service details Content End -->
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

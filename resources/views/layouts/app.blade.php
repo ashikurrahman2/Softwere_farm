@@ -50,9 +50,7 @@
 
 </head>
 <body>
-    <div class="main-wrapper">
-
-    </div>
+  
     <!-- header start -->
     @include('frontend.layouts.header')
     <!-- navbar end -->

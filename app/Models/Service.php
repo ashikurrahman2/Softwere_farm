@@ -19,6 +19,7 @@ class Service extends Model
         'service_image',
         'service_title',
         'service_description',
+        'experience',
     ];
 
     // Function to upload and resize image
@@ -75,6 +76,7 @@ class Service extends Model
         $service->service_image           = $imageUrl;
         $service->service_title           = $request->service_title;
         $service->service_description     = $request->service_description;
+        $service->experience              = $request->experience;
         $service->save();
     }
 

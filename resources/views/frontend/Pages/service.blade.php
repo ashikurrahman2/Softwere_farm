@@ -62,7 +62,7 @@
 <!-- Page Banner End -->
 
        <!-- Service Start -->
-       <div class="section techwix-service-section-06 section-padding" style="background-image: url(assets/images/bg/service-bg6.jpg);">
+       <div class="section techwix-service-section-06 section-padding" style="background-image: url({{ asset('/') }}frontend/assets/images/bg/service-bg6.jpg);">
         <div class="container">
             <!-- Service Wrap Start -->
             <div class="service-wrap">
@@ -74,56 +74,19 @@
                     <div class="row">
                         <div class="col-xl-3 col-sm-6">
                             <!-- Service Item Start -->
+                            @foreach ($services as $service)
                             <div class="service-item-05">
                                 <div class="service-img">
-                                    <img src="{{ asset('/') }}frontend/assets/images/ser-icon17.png" alt="">
+                                    <img src="{{ asset($service->service_image) }}" alt="">
                                 </div>
                                 <div class="service-content">
-                                    <h3 class="title"><a href="service.html">Network Security & Protection</a></h3>
-                                    <p>Accelerate innovation with world-class tech teams We’ll match you to an entire remote team .</p>
+                                    <h3 class="title"><a href="{{ route('service_details') }}">{{ $service->service_title }}</a></h3>
+                                    <p>{{Str::limit($service->service_description, 100) }}</p>
                                 </div>
                             </div>
                             <!-- Service Item End -->
                         </div>
-                        {{-- <div class="col-xl-3 col-sm-6">
-                            <!-- Service Item Start -->
-                            <div class="service-item-05">
-                                <div class="service-img">
-                                    <img src="assets/images/ser-icon18.png" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3 class="title"><a href="service.html">Browser Safety & Farewell</a></h3>
-                                    <p>Accelerate innovation with world-class tech teams We’ll match you to an entire remote team .</p>
-                                </div>
-                            </div>
-                            <!-- Service Item End -->
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <!-- Service Item Start -->
-                            <div class="service-item-05">
-                                <div class="service-img">
-                                    <img src="assets/images/ser-icon19.png" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3 class="title"><a href="service.html">Network Security & Protection</a></h3>
-                                    <p>Accelerate innovation with world-class tech teams We’ll match you to an entire remote team .</p>
-                                </div>
-                            </div>
-                            <!-- Service Item End -->
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <!-- Service Item Start -->
-                            <div class="service-item-05">
-                                <div class="service-img">
-                                    <img src="assets/images/ser-icon20.png" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3 class="title"><a href="service.html">Browser Safety & Farewell</a></h3>
-                                    <p>Accelerate innovation with world-class tech teams We’ll match you to an entire remote team .</p>
-                                </div>
-                            </div>
-                            <!-- Service Item End -->
-                        </div> --}}
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -158,31 +121,32 @@
                     </div>
                     <div class="col-lg-5">
                         <!-- Cta Right Start -->
+                        @foreach ($abouts as $about)
                         <div class="cta-right">
                             <div class="counter-item-box">
                                 <!-- Cta Item Start -->
                                 <div class="counter-item">
-                                    <span class="counter">1790</span>
+                                    <span class="counter">{{ $about->happy_clients }}</span>
                                     <p>Happy clients</p>
                                 </div>
                                 <!-- Cta Item End -->
                                 <!-- Cta Item Start -->
                                 <div class="counter-item counter-1">
-                                    <span class="counter">245</span>
-                                    <p>Happy clients</p>
+                                    <span class="counter">{{$about->skills_experts}}</span>
+                                    <p>Skills Exparts</p>
                                 </div>
                                 <!-- Cta Item End -->
                             </div>
                             <div class="counter-item-box">
                                 <!-- Cta Item Start -->
                                 <div class="counter-item">
-                                    <span class="counter">491</span>
+                                    <span class="counter">{{ $about->complete_projects }}</span>
                                     <p>Finished projects</p>
                                 </div>
                                 <!-- Cta Item End -->
                                 <!-- Cta Item Start -->
                                 <div class="counter-item counter-2">
-                                    <span class="counter">1090</span>
+                                    <span class="counter">{{ $about->media_posts }}</span>
                                     <p>Media Posts</p>
                                 </div>
                                 <!-- Cta Item End -->
@@ -190,6 +154,7 @@
                         </div>
                         <!-- Cta Right End -->
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>

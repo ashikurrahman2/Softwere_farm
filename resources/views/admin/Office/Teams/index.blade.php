@@ -40,6 +40,7 @@
                                         <th>Member Image</th>
                                         <th>Designation</th>
                                         <th>Company Name</th>
+                                        <th>Member Skills</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -54,6 +55,7 @@
                                         <th>Member Image</th>
                                         <th>Designation</th>
                                         <th>Company Name</th>
+                                        <th>Member Skills</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>
@@ -100,6 +102,11 @@
                             <label for="company_name" class="col-form-label pt-0">Company Name</label>
                             <input type="text" class="form-control" id="company_name" name="company_name">
                         </div>
+
+                        <div class="col-md-12">
+                            <label for="skills" class="col-form-label pt-0">Member Skills</label>
+                            <input type="text" class="form-control" id="skills" name="skills">
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -127,10 +134,9 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript">
-    $(function team() {
-        var table = $('#teamTable').DataTable({
+    $(function() {
+        var table = $('.ytable').DataTable({
             processing: true,
             serverSide: true,
             ajax: "{{ route('team.index') }}",
@@ -141,16 +147,17 @@
                 { data: 'image', name: 'image' },
                 { data: 'designation', name: 'designation' },
                 { data: 'company_name', name: 'company_name' },
+                { data: 'skills', name: 'skills' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]
         });
-    });
 
-    // For editing team 
-    $('body').on('click', '.edit', function() {
-        let id = $(this).data('id');
-        $.get("team/" + id + "/edit", function(data) {
-            $('.modal-body').html(data);
+        // Load edit form
+        $('body').on('click', '.edit', function() {
+            let id = $(this).data('id');
+            $.get("team/" + id + "/edit", function(data) {
+                $('#editModal .modal-body').html(data);
+            });
         });
     });
 </script>

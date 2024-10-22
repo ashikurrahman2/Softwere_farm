@@ -38,21 +38,20 @@
                             <!-- Footer Widget End -->
                         </div>
                         <div class="col-lg-3 col-sm-6">
+                            @foreach ($services as $service)
                             <!-- Footer Widget Start -->
                             <div class="footer-widget">
                                 <h4 class="footer-widget-title">Our Services</h4>
 
                                 <div class="widget-link">
                                     <ul class="link">
-                                        <li><a href="#">Data Security</a></li>
-                                        <li><a href="#">IT Managment</a></li>
-                                        <li><a href="#">Outsourcing</a></li>
-                                        <li><a href="#">Networking</a></li>
+                                        <li><a href="{{ route('service_details') }}">{{ $service->service_title }}</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <!-- Footer Widget End -->
                         </div>
+                        @endforeach
                         <div class="col-lg-3 col-sm-6">
                             <!-- Footer Widget Start -->
                             <div class="footer-widget">

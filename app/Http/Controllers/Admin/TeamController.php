@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
-      // Toastr message calling
     protected $toastr;
 
     public function __construct(ToastrInterface $toastr)
@@ -19,7 +18,7 @@ class TeamController extends Controller
         $this->toastr = $toastr;
     }
 
-     // View Data operation
+    // View the data
     public function index(Request $request)
     {
         if ($request->ajax()) {
@@ -53,51 +52,53 @@ class TeamController extends Controller
         return view('admin.Office.Teams.index');
     }
 
-    // Insert data operation
+    // Insert data
     public function store(Request $request)
-    {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'member_name' => 'required|string|max:1000',
-            'member_details' => 'required|string|max:500',
-            'company_name' => 'required|string|max:500',
-            'designation' => 'required|string|max:500',
-        ]);
-
-        Teams::newTeam($request);
-        $this->toastr->success('Teams info added successfully!');
-        return back();
-    }
-  
-    // Fetching the edit file
-    public function edit($id)
-    {
-        $team = Teams::findOrFail($id);
-        return view('admin.Office.Teams.edit', compact('team'));
-    }
-    
-    // Edit data operation  
-    public function update(Request $request, $id)
     {
         $request->validate([
             'member_name' => 'required|string|max:1000',
             'member_details' => 'string|max:500',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'company_name' => 'required|string|max:500',
             'designation' => 'required|string|max:500',
+            'skills' => 'required|string|max:1000',
         ]);
 
-        Teams::updateTeam($request, $id);
-        $this->toastr->warning('Teams info updated successfully!');
+        Teams::newTeam($request);
+        $this->toastr->success('Team info added successfully!');
         return back();
     }
 
-    // Delete Operation
+    // Fetch edit view
+    public function edit($id)
+    {
+        $teams = Teams::findOrFail($id);
+        return view('admin.Office.Teams.edit', compact('teams'));
+    }
+
+    // Update data
+    public function update(Request $request, Teams $teams)
+    {
+        $request->validate([
+            'member_name' => 'required|string|max:1000',
+            'member_details' => 'string|max:500',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'company_name' => 'required|string|max:500',
+            'designation' => 'required|string|max:500',
+            'skills' => 'required|string|max:1000',
+        ]);
+
+        Teams::updateTeam($request, $teams);
+        $this->toastr->warning('Team info updated successfully!');
+        return back();
+    }
+
+    // Delete operation
     public function destroy($id)
     {
-        $team = Teams::findOrFail($id);
-        $team->delete();
-        $this->toastr->error('Teams info deleted!');
+        $teams = Teams::findOrFail($id);
+        $teams->delete();
+        $this->toastr->success('teams deleted successfully!');
         return back();
     }
-
 }

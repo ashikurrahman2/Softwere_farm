@@ -37,6 +37,7 @@
                                         <th>SL</th>
                                         <th>Service Title</th>
                                         <th>Service Description</th>
+                                        <th>Service Experience</th>
                                         <th>Service Image</th>
                                         <th>Action</th>
                                     </tr>
@@ -49,6 +50,7 @@
                                         <th>SL</th>
                                         <th>Service Title</th>
                                         <th>Service Description</th>
+                                        <th>Service Experience</th>
                                         <th>Service Image</th>
                                         <th>Action</th>
                                     </tr>
@@ -84,6 +86,12 @@
                         <div class="col-md-12">
                             <label for="service_description" class="col-form-label pt-0">Service Description</label>
                             <textarea class="form-control" id="service_description" name="service_description"></textarea>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="experience" class="col-form-label pt-0">Service Experience <sup class="text-size-20 top-1">*</sup></label>
+                            <input type="number" class="form-control" id="experience" name="experience" required>
+                            <small id="textHelp" class="form-text text-muted">Must be integer number</small>
                         </div>
 
                         <div class="col-md-12">
@@ -129,12 +137,13 @@
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                 { data: 'service_title', name: 'service_title' },
                 { data: 'service_description', name: 'service_description' },
+                { data: 'experience', name: 'experience' },
                 { data: 'service_image', name: 'service_image' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]
         });
 
-        // Load edit form
+        // Load edit service form
         $('body').on('click', '.edit', function() {
             let id = $(this).data('id');
             $.get("service/" + id + "/edit", function(data) {

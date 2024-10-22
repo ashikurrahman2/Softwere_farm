@@ -86,7 +86,7 @@
 <!-- Features End -->
 
        <!-- About Start -->
-       <div class="section techwix-about-section-06 section-padding-03">
+       {{-- <div class="section techwix-about-section-06 section-padding-03">
         <div class="shape-1"></div>
         <div class="container">
             <!-- About Wrapper Start -->
@@ -138,10 +138,63 @@
             </div>
             <!-- About Wrapper End -->
         </div>
+    </div> --}}
+  <!-- About Start -->
+  <div class="section techwix-about-section-06 section-padding-03">
+    <div class="shape-1"></div>
+    <div class="container">
+        <!-- About Wrapper Start -->
+        <div class="about-wrap">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- About Image Start -->
+                    <div class="about-img">
+                        
+                        <img class="shape-1" src="{{ asset('/') }}frontend/assets/images/shape/about-shape1.png" alt="">
+                        <div class="image">
+                            <img src="{{ asset('/') }}frontend/assets/images/about-img3.jpg" alt="">
+                        </div>
+                        <div class="play-btn">
+                            <a class="popup-video" href="https://www.youtube.com/watch?time_continue=3&amp;v=_X0eYtY8T_U"><i class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                    <!-- About Image End -->
+                </div>
+                <div class="col-lg-6">
+               
+                    <!-- About Content Wrap Start -->
+                    <div class="about-content-wrap">
+                        <div class="section-title">
+                            {{-- @foreach ($abouts as $about ) --}}
+                                
+                            <h3 class="sub-title color-3">Who we are</h3>
+                            <h2 class="title">hjklj</h2>
+                        </div>
+                        {{-- @endforeach --}}
+                        <p class="text">jkklklk</p>
+                        {{-- @endforeach --}}
+                        <!-- About List Wrap Start -->
+
+                        <div class="about-list-wrap">
+                            <ul class="about-list">
+                                <li class="list"><a href="#">Home Protection <i class="fas fa-long-arrow-alt-right"></i></a></li>
+                                <li class="list"><a href="#">Corporate Security for office <i class="fas fa-long-arrow-alt-right"></i></a></li>
+                                <li class="list"><a href="#">Solution For Devices <i class="fas fa-long-arrow-alt-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- About List Wrap End -->
+                    </div>
+                    <!-- About Content Wrap End -->
+                </div>
+               
+            </div>
+        </div>
+        <!-- About Wrapper End -->
     </div>
-    <!-- About End -->
+</div>
+<!-- About End -->
 
 {{-- Including custom script and custom style file --}}
-    @include('frontend.layouts.custom_script')
-    @include('frontend.layouts.custom_style')
+    {{-- @include('frontend.layouts.custom_script')
+    @include('frontend.layouts.custom_style') --}}
 @endsection

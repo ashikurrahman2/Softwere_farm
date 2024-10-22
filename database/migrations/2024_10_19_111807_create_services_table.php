@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('service_image');
             $table->string('service_title');
             $table->string('service_description');
+            $table->string('experience')->nullable();
             $table->timestamps();
         });
     }

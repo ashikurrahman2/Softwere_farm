@@ -37,6 +37,11 @@
             <label for="company_name" class="col-form-label pt-0">Company Name</label>
             <input type="text" class="form-control" id="company_name" name="company_name" value="{{ $team->company_name }}">
         </div>
+
+        <div class="col-md-12">
+            <label for="skills" class="col-form-label pt-0">Member Skills</label>
+            <input type="text" class="form-control" id="skills" name="skills" value="{{ $team->skills }}">
+        </div>
     </div>
 
     <div class="modal-footer">

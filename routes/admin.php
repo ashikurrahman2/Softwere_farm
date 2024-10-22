@@ -4,7 +4,6 @@ use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TeamController;
-use App\Http\Controllers\Admin\SkillsController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\SettingController;
@@ -29,7 +28,7 @@ Route::middleware(['auth', IsAdmin::class])->group(function() {
     Route::resource('abouts', AboutController::class)->except(['show', 'create']);
     Route::resource('team', TeamController::class);
     Route::resource('service', ServiceController::class);
-    Route::resource('skill', SkillsController::class);
+    
    
     /*** Setting Route ***/
     Route::prefix('setting')->group(function () {

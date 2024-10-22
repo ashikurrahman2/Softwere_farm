@@ -12,6 +12,12 @@
             <textarea class="form-control" id="sub_title" name="service_description">{{ $service->service_description }}</textarea>
         </div>
 
+        <div class="col-md-12">
+            <label for="experience" class="col-form-label pt-0">Service Experience <sup class="text-size-20 top-1">*</sup></label>
+            <input type="number" class="form-control" id="experience" name="experience" value="{{ $service->experience }}" required>
+            <small id="textHelp" class="form-text text-muted">Must be integer number</small>
+        </div>
+
         <div class="form-group">
             <label for="image" class="col-form-label pt-0">Current Service Image</label>
             <br>

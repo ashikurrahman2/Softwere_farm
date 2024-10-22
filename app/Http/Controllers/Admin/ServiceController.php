@@ -58,7 +58,8 @@ class ServiceController extends Controller
         $request->validate([
             'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'service_title' => 'required|string|max:1000',
-            'service_description' => 'required|string|max:500',
+            'service_description' => 'required|string|max:1000',
+            'experience' => 'required|numeric|max:250',
         ]);
 
         Service::newService($request);
@@ -79,7 +80,8 @@ class ServiceController extends Controller
         $request->validate([
             'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'service_title' => 'required|string|max:1000',
-            'service_description' => 'required|string|max:500',
+            'service_description' => 'required|string|max:1000',
+            'experience' => 'required|numeric|max:250',
         ]);
 
         Service::updateService($request, $service->id);

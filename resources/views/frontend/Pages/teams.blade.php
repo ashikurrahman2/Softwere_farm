@@ -68,27 +68,27 @@
                 <div class="team-wrap">
                     <div class="row">
                         <div class="col-lg-3 col-sm-6">
-                            <!-- Single Team Start -->
+                            @foreach ($teams as $team)
+                                <!-- Single Team Start -->
                             <div class="single-team">
                                 <div class="team-img">
-                                    <a href="team.html">
-                                        <img src="{{ asset('/') }}frontend/assets/images/team/team-1.jpg" alt=""></a>
+                                    <a href="{{ route('teamDetail') }}">
+                                        <img src="{{ asset($team->image) }}" alt=""></a>
                                 </div>
                                 <div class="team-content">
-                                    <h3 class="name"><a href="#">Andrew <br> Max Fetcher</a></h3>
-                                    <span class="designation">CEO, techwix</span>
+                                    <h3 class="name"><a href="{{ route('teamDetail') }}">{{ $team->member_name }} <br></a></h3>
+                                    <span class="designation">{{ $team->designation }},{{ $team->company_name }}</span>
                                     <div class="team-social">
                                         <ul class="social">
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <!-- Single Team End -->
                         </div>
+                        @endforeach
                     </div>
                 </div>
                 <!-- Team Wrap End -->
