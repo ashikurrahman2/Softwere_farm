@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 
+@section('title', 'Login')
 @section('admin_content')
 
     <div class="auth-main v1">

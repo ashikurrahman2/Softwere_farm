@@ -15,9 +15,13 @@
             <p style="color: black;"><strong>Summary:</strong>{{ $team->member_details }}</p>
             <p class="company-name" style="color: black;"><strong>Company:</strong>{{ $team->company_name }}</p>
             <div class="skills">
-                <span>{{ $team->skills }}</span>
-                <span>React</span>
-                {{-- <span>Node.js</span> --}}
+                @php
+                 // Split the skills string into an array
+                    $skills = explode(',', $team->skills);
+                @endphp
+                @foreach($skills as $skill)
+                    <span class="badge badge-info">{{ $skill }}</span>
+                @endforeach
             </div>
             <a href="#" class="btn btn-primary contact-btn">Contact Me</a>
         </div>

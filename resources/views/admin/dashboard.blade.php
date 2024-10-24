@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 
+@section('title', 'Dashboard')
 @section('admin_content')
 
     <div class="pc-container">

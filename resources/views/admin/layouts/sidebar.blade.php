@@ -56,6 +56,9 @@
                             <li class="pc-item"><a class="pc-link"
                             href="{{route('service.index')}}">Services</a>
                         </li> 
+                        <li class="pc-item"><a class="pc-link"
+                            href="{{route('skill.index')}}">Skills</a>
+                        </li> 
                         </ul>
                 </li>
           

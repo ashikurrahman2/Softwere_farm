@@ -11,16 +11,15 @@ class Teams extends Model
 {
     use HasFactory;
 
-    private static $image, $imageName, $directory, $imageUrl;
+    protected static $image, $imageName, $directory, $imageUrl;
 
-    // Fillable fields to allow mass assignment
     protected $fillable = [
         'image',
         'member_name',
         'member_details',
         'company_name',
         'designation',
-        'skills',
+        'skills_id',
     ];
 
     // Function to upload and resize image
@@ -32,10 +31,12 @@ class Teams extends Model
         self::$image->move(self::$directory, self::$imageName);
         
         // Resize the image using Intervention Image
+        // $imageManager = new ImageManager();
         $imageManager = new ImageManager(new Driver());
-        $imageUrl = $imageManager->read(self::$directory .self::$imageName);
-        $imageUrl->resize(150, 150);
-        $imageUrl->save(self::$directory. self::$imageName);
+        $image = $imageManager->read(self::$directory . self::$imageName); // Use make() instead of read()
+        $image->resize(150, 150);
+        $image->save(self::$directory . self::$imageName);
+
         self::$imageUrl = self::$directory . self::$imageName;
         return self::$imageUrl;
     }
@@ -52,8 +53,8 @@ class Teams extends Model
     // Update an existing team
     public static function updateTeam($request, $id)
     {
-               // Fetch the team record using the ID
-               $teams = self::findOrFail($id);
+        // Fetch the team record using the ID
+        $team = self::findOrFail($id);
         if ($request->file('image')) {
             if (file_exists($team->image)) {
                 unlink($team->image);
@@ -71,7 +72,7 @@ class Teams extends Model
         $team->member_details    = $request->member_details;
         $team->company_name      = $request->company_name;
         $team->designation       = $request->designation;
-        $team->skills            = $request->skills;
+        $team->skills_id         = $request->skills_id; 
         $team->image             = $imageUrl;
         $team->save();
     }
@@ -83,5 +84,10 @@ class Teams extends Model
             unlink($team->image);
         }
         $team->delete();
+    }
+
+    public function skill() // This relationship is correctly defined
+    {
+        return $this->belongsTo(Skills::class, 'skills_id');
     }
 }
