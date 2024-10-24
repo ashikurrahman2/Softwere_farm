@@ -156,10 +156,6 @@
                 { data: 'member_details', name: 'member_details' },
                 { data: 'company_name', name: 'company_name' },
                 { data: 'designation', name: 'designation' },
-                // { data: 'skills_id', name: 'skills_id' },
-                // { data: 'image', name: 'image', render: function(data) {
-                //     return '<img src="' + data + '" width="50" height="50" />';
-                // }},
                 { data: 'image', name: 'image' },
                 { data: 'skills_id', name: 'skills_id' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }
